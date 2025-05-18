@@ -1,0 +1,52 @@
+# workflow-controller.toml
+
+################################################################################
+# LLM/툴(CLI, Cursor, Cline, Windsurf 등)을 활용한 워크플로우 수정 안내:
+#
+# 1. 이 파일을 열고 [[steps]] 블록을 확인하세요.
+# 2. 이미 처리된 단계(id에 대응하는 archives/*.toml 파일이 존재하면)
+#    해당 단계의 status를 "completed"로 바꿔둡니다.
+# 3. 진행할 첫 번째 pending 단계를 "active"로 표시하세요.
+# 4. 질문 파일(questions_base_dir/id.toml)을 보고 사용자에게 물어본 뒤,
+#    archives/id.toml에 답변을 저장합니다.
+# 5. 완료된 단계의 status를 "completed"로, 다음 단계의 status를 "active"로 업데이트하세요.
+################################################################################
+
+[global_settings]
+# 이 설정 파일 위치를 기준으로 questions/와 archives/ 폴더를 참조합니다.
+use_config_location_as_root = true
+questions_base_dir = "questions"
+output_base_dir = "archives"
+# 각 step.id에 해당하는 파일(archives/<id>.toml)이 존재하는지 검사하고,
+# 존재할 경우 해당 [[steps]] 항목의 status를 "completed"로 자동 변경합니다.
+# 이후, 남은 status="pending" 단계들은
+# steps 배열 순서대로 하나씩 처리(실행)되도록 합니다.
+auto_complete_from_archives = true
+
+[[steps]]
+id = "language-preferences"
+status = "pending"
+
+[[steps]]
+id = "definition/core-concept"
+status = "pending"
+
+[[steps]]
+id = "expansion/idea-generation"
+status = "pending"
+
+[[steps]]
+id = "research/reference-gathering"
+status = "pending"
+
+[[steps]]
+id = "persona/user-persona-sketch"
+status = "pending"
+
+[[steps]]
+id = "stack/backend-technology"
+status = "pending"
+
+[[steps]]
+id = "stack/frontend-framework"
+status = "pending"
