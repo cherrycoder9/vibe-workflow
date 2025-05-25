@@ -1,8 +1,12 @@
-# questions/language.toml
+# questions/language-preferences.toml
 
 group_id = "language-preferences"
 title = "언어 설정"
 description = "대화·문서·주석 언어에 대한 선호를 묻습니다."
+# current_question_id: 현재 진행 중인 질문 ID.
+# 첫 질문 전: ""
+# 모든 질문 완료 후: "completed"
+current_question_id = ""
 
 [[questions]]
 id = "interaction-language"

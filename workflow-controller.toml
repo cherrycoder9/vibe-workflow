@@ -25,28 +25,8 @@ auto_complete_from_archives = true
 
 [[steps]]
 id = "language-preferences"
-status = "pending"
+status = "completed"
 
 [[steps]]
-id = "definition/core-concept"
-status = "pending"
-
-[[steps]]
-id = "expansion/idea-generation"
-status = "pending"
-
-[[steps]]
-id = "research/reference-gathering"
-status = "pending"
-
-[[steps]]
-id = "persona/user-persona-sketch"
-status = "pending"
-
-[[steps]]
-id = "stack/backend-technology"
-status = "pending"
-
-[[steps]]
-id = "stack/frontend-framework"
-status = "pending"
+id = "project-definition"
+status = "active"
