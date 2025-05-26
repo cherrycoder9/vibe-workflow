@@ -45,6 +45,6 @@ description = "프로젝트의 지속 가능성 및 확장성을 위한 추가 �
 
 [[questions]]
 id = "supporting-documents"
-prompt = "프로젝트 관련 사업 계획서, 보고서 등 참고 자료가 있다면 'project-docs' 폴더에 저장하여 관리하는 것을 권장합니다."
+prompt = "프로젝트 관련 사업 계획서, 보고서, 로고, 아이템 분석 등 참고 자료가 있다면 'project-docs' 폴더에 저장하여 관리하는 것을 권장합니다."
 description = "'project-docs' 폴더에 프로젝트 정의와 관련된 외부 문서를 저장합니다."
 options = ["네, 'project-docs' 폴더에 자료를 저장했습니다."]

@@ -1,0 +1,92 @@
+group_id = "api-design"
+title = "API 설계"
+description = "API 설계 핵심 항목을 정리한 질문 목록입니다. AI 추천을 선택시 'project-docs' 폴더의 관련 문서, 'project-definition.toml', 'tech-stack-questions.toml' 파일을 참조합니다."
+current_question_id = ""
+
+[[questions]]
+id = "resource-modeling"
+prompt = "어떤 주요 '자원(Resource)'을 API로 노출해야 할까요? (예: 사용자, 제품, 게시글)\n각 자원이 가져야 할 주요 속성(필드)은 무엇인가요?\n자원 간 관계(1:N, N:M 등)는 어떻게 정의되나요?"
+description = "API로 노출할 주요 자원, 각 자원의 속성, 그리고 자원 간의 관계를 정의합니다."
+options = [
+  "🤖 AI 추천 (핵심 기능 기반 자원 제안)",
+  "자원 없음 (API 불필요 시)",
+  "예시 자원: 사용자(User): id, username, email, created_at 등",
+  "예시 자원: 제품(Product): id, name, description, price, stock 등",
+  "예시 자원: 주문(Order): id, user_id, product_id, quantity, status 등",
+  "기타: _____",
+]
+
+[[questions]]
+id = "endpoint-design"
+prompt = "각 자원에 대해 어떤 CRUD 작업이 필요할까요?\nURL 경로와 HTTP 메서드는 어떻게 구성할까요? (예: GET /users)"
+description = "각 자원에 필요한 CRUD 작업, URL 경로, 그리고 HTTP 메서드 구성을 정의합니다."
+options = [
+  "🤖 AI 추천 (표준 CRUD 엔드포인트 제안)",
+  "엔드포인트 없음 (API 불필요)",
+  "예시 엔드포인트: GET /users",
+  "예시 엔드포인트: POST /users",
+  "예시 엔드포인트: GET /users/{userId}",
+  "예시 엔드포인트: PUT /users/{userId}",
+  "예시 엔드포인트: DELETE /users/{userId}",
+  "기타: 메서드, 경로, 설명",
+]
+
+[[questions]]
+id = "request-response-format"
+prompt = "클라이언트와 서버 간 데이터 교환에 어떤 형식을 사용할까요?\nJSON 외에 다른 포맷을 고려해야 할 특별한 이유가 있나요?"
+description = "클라이언트와 서버 간 데이터 교환 형식 및 JSON 외 다른 포맷 고려 여부를 정의합니다."
+options = [
+  "🤖 AI 추천 (프로젝트/통신 방식 기반 추천)",
+  "JSON",
+  "XML",
+  "Protocol Buffers",
+  "기타: _____",
+]
+
+[[questions]]
+id = "authentication-authorization"
+prompt = "API 접근을 어떻게 보호할까요? 사용자 신원 확인과 권한 관리는?"
+description = "API 접근 보호를 위한 인증 및 인가 방식, 사용자 신원 확인 및 권한 관리 방법을 정의합니다."
+options = [
+  "🤖 AI 추천 (보안·사용자 경험 기반 추천)",
+  "JWT 토큰",
+  "OAuth 2.0",
+  "API Key",
+  "Session Cookie",
+  "기타: _____",
+]
+
+[[questions]]
+id = "version-management-strategy"
+prompt = "향후 API 변경 시 호환성을 어떻게 유지할까요?"
+description = "향후 API 변경 시 호환성 유지를 위한 버전 관리 전략을 정의합니다."
+options = [
+  "🤖 AI 추천 (일반 모범 사례 기반 추천)",
+  "URI 버전명 (예: /v1/...)",
+  "HTTP 헤더 버전 (Accept header)",
+  "미디어 타입 버전",
+  "기타: _____",
+]
+
+[[questions]]
+id = "error-handling-status-codes"
+prompt = "오류 발생 시 클라이언트에 어떤 형태로 알릴까요?"
+description = "오류 발생 시 클라이언트에 알릴 에러 핸들링 방식 및 상태 코드 구성을 정의합니다."
+options = [
+  "🤖 AI 추천 (표준 에러 형식 제안)",
+  "HTTP 상태 코드 + 간단 메시지",
+  "상세 에러 객체(JSON API 스펙)",
+  "기타: _____",
+]
+
+[[questions]]
+id = "documentation-tools-methods"
+prompt = "API 명세를 어떻게 문서화하고 공유할까요?"
+description = "API 명세 문서화 및 공유 도구와 방식을 정의합니다."
+options = [
+  "🤖 AI 추천 (기술 스택 기반 추천)",
+  "OpenAPI (Swagger)",
+  "GraphQL SDL",
+  "API Blueprint",
+  "기타: Postman, Markdown",
+]

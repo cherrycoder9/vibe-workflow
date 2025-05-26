@@ -1,0 +1,8 @@
+group_id = "summarize-project-docs"
+title = "프로젝트 문서 요약"
+description = "LLM이 'project-docs' 폴더의 모든 문서를 분석하고 핵심 내용을 요약하여 'archives/summarize-project-docs.toml' 파일로 저장하고 코딩 작업에 활용할 수 있도록 정리합니다."
+current_question_id = ""
+
+[[questions]]
+id = "summarize-docs"
+description = "'project-docs' 폴더의 내용을 기반으로 LLM이 코딩에 필요한 정보를 추출하고 요약하여 'archives/summarize-project-docs.toml' 파일로 저장합니다."
