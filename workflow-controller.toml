@@ -26,33 +26,33 @@ output_base_dir = "archives"
 auto_complete_from_archives = true
 
 [[steps]]
-id = "language-preferences"
+id = "language-preferences.toml"
 status = "pending"
 
 [[steps]]
-id = "repository-type-and-links"
+id = "repository-type-and-links.toml"
 status = "pending"
 
 [[steps]]
-id = "project-definition"
+id = "project-definition.toml"
 status = "pending"
 
 [[steps]]
-id = "tech-stack"
+id = "tech-stack.toml"
 status = "pending"
 
 [[steps]]
-id = "api-design"
+id = "api-design.toml"
 status = "pending"
 
 [[steps]]
-id = "frontend-screens"
+id = "frontend-screens.toml"
 status = "pending"
 
 [[steps]]
-id = "summarize-project-docs-auto"
+id = "summarize-project-docs-auto.toml"
 status = "pending"
 
 [[steps]]
-id = "update-clinerules-auto"
+id = "update-clinerules-auto.toml"
 status = "pending"
