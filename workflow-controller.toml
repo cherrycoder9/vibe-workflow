@@ -30,6 +30,10 @@ id = "language-preferences"
 status = "pending"
 
 [[steps]]
+id = "repository-type-and-links"
+status = "pending"
+
+[[steps]]
 id = "project-definition"
 status = "pending"
 
@@ -46,5 +50,9 @@ id = "frontend-screens"
 status = "pending"
 
 [[steps]]
-id = "summarize-project-docs"
+id = "summarize-project-docs-auto"
+status = "pending"
+
+[[steps]]
+id = "update-clinerules-auto"
 status = "pending"
