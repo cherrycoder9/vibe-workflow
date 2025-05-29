@@ -96,3 +96,10 @@ content = """
 **이런 짓은 하지 마라 (안티패턴):**
 *   KDF 여러 번 돌리기, AEAD 이중 암호화, PBKDF2/bcrypt 새로 도입 (Argon2 써!), Pepper를 DB에 저장, Nonce 고정해서 쓰기, 직접 만든 암호화 알고리즘 쓰기.
 """
+
+[[guidelines]]
+id = "framework-documentation-reference"
+title = "프레임워크 문서 참조: 삽질 줄이고 효율 높이기"
+content = """
+프레임워크 사용법이 궁금할 때는 `framework-docs` 폴더를 먼저 확인해라. 간단한 사용 설명서가 거기 있으니, 불필요한 삽질을 줄이고 빠르게 핵심을 파악하는 데 도움이 될 거다.
+"""
