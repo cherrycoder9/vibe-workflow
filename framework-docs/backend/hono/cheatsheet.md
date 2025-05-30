@@ -1,1 +1,0 @@
-# Hono Cheatsheet
