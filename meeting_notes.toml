@@ -1,0 +1,4 @@
+[[notes]]
+timestamp = "2025-05-31T11:28:42+09:00"
+category = "기술 스택"
+content = "개발 언어: TypeScript, 프레임워크: SvelteKit (프론트엔드), Hono (백엔드)"
