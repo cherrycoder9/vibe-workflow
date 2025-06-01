@@ -27,6 +27,6 @@ configuration_guide = { path = "vibe-workflow/configuration_guide.md", descripti
 test_case_template = { path = "vibe-workflow/test_case_template.md", description = "테스트 케이스 작성 표준 및 템플릿을 제공하는 파일" }
 
 [language_framework_guidelines_files]
-sveltekit_guidelines = { path = "vibe-workflow/language_framework_guidelines/sveltekit_guidelines.md", description = "SvelteKit 사용 시 주의사항 및 가이드라인" }
+sveltekit_guidelines = { path = "vibe-workflow/language_framework_guidelines/sveltekit_guidelines.md", description = "SvelteKit 및 Svelte 5 사용 시 주의사항 및 가이드라인" }
 hono_guidelines = { path = "vibe-workflow/language_framework_guidelines/hono_guidelines.md", description = "Hono 사용 시 주의사항 및 가이드라인" }
-tauri_guidelines = { path = "vibe-workflow/language_framework_guidelines/tauri_guidelines.md", description = "Tauri 사용 시 주의사항 및 가이드라인" }
+typescript_guidelines = { path = "vibe-workflow/language_framework_guidelines/typescript_guidelines.md", description = "TypeScript 사용 시 주의사항 및 가이드라인" }
