@@ -26,10 +26,12 @@ coding_conventions = { path = "vibe-workflow/coding_conventions.md", description
 configuration_guide = { path = "vibe-workflow/configuration_guide.md", description = "프로젝트 설정 방법 및 환경 변수 상세 안내를 제공하는 파일" }
 test_case_template = { path = "vibe-workflow/test_case_template.md", description = "테스트 케이스 작성 표준 및 템플릿을 제공하는 파일" }
 
-[language_framework_guidelines_files]
+[languageframework_guidelines_files]
 sveltekit_guidelines = { path = "vibe-workflow/language_framework_guidelines/sveltekit_guidelines.md", description = "SvelteKit 및 Svelte 5 사용 시 주의사항 및 가이드라인" }
 hono_guidelines = { path = "vibe-workflow/language_framework_guidelines/hono_guidelines.md", description = "Hono 사용 시 주의사항 및 가이드라인" }
 typescript_guidelines = { path = "vibe-workflow/language_framework_guidelines/typescript_guidelines.md", description = "TypeScript 사용 시 주의사항 및 가이드라인" }
 html_guidelines = { path = "vibe-workflow/language_framework_guidelines/html_guidelines.md", description = "HTML 사용 시 주의사항 및 가이드라인" }
 css_guidelines = { path = "vibe-workflow/language_framework_guidelines/css_guidelines.md", description = "CSS 사용 시 주의사항 및 가이드라인" }
 tauri_guidelines = { path = "vibe-workflow/language_framework_guidelines/tauri_guidelines.md", description = "Tauri 사용 시 주의사항 및 가이드라인" }
+rust_guidelines = { path = "vibe-workflow/language_framework_guidelines/rust_guidelines.md", description = "Rust 사용 시 주의사항 및 가이드라인" }
+markdown_guidelines = { path = "vibe-workflow/language_framework_guidelines/markdown_guidelines.md", description = "Markdown 문서 작성 시 주의사항 및 가이드라인" }
