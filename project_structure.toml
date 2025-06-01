@@ -30,3 +30,6 @@ test_case_template = { path = "vibe-workflow/test_case_template.md", description
 sveltekit_guidelines = { path = "vibe-workflow/language_framework_guidelines/sveltekit_guidelines.md", description = "SvelteKit 및 Svelte 5 사용 시 주의사항 및 가이드라인" }
 hono_guidelines = { path = "vibe-workflow/language_framework_guidelines/hono_guidelines.md", description = "Hono 사용 시 주의사항 및 가이드라인" }
 typescript_guidelines = { path = "vibe-workflow/language_framework_guidelines/typescript_guidelines.md", description = "TypeScript 사용 시 주의사항 및 가이드라인" }
+html_guidelines = { path = "vibe-workflow/language_framework_guidelines/html_guidelines.md", description = "HTML 사용 시 주의사항 및 가이드라인" }
+css_guidelines = { path = "vibe-workflow/language_framework_guidelines/css_guidelines.md", description = "CSS 사용 시 주의사항 및 가이드라인" }
+tauri_guidelines = { path = "vibe-workflow/language_framework_guidelines/tauri_guidelines.md", description = "Tauri 사용 시 주의사항 및 가이드라인" }
