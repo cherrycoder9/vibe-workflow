@@ -9,11 +9,13 @@ root_directory = "."
 
 [directories]
 vibe_workflow = { path = "vibe-workflow/", description = "LLM 규약 및 문서 파일들을 포함하는 디렉토리" }
+language_framework_guidelines = { path = "vibe-workflow/language_framework_guidelines/", description = "특정 언어 및 프레임워크 사용 시 주의사항을 포함하는 디렉토리" }
 
-[files]
+[root_files]
 clinerules = { path = ".clinerules", description = "AI 행동 원칙을 정의하는 루트 규칙 파일" }
 
 [vibe_workflow_files]
+readme = { path = "vibe-workflow/README.md", description = "LLM 이용 방법에 대한 가이드를 제공하는 파일" }
 meeting_notes = { path = "vibe-workflow/meeting_notes.toml", description = "사용자와의 대화에서 도출된 주요 결정 사항, 새로운 아이디어, 변경된 맥락 등을 기록하는 파일" }
 requirements_definition = { path = "vibe-workflow/requirements_definition.md", description = "프로젝트의 전체적인 요구사항을 정의하는 파일" }
 feature_specification = { path = "vibe-workflow/feature_specification.md", description = "개별 기능의 상세 명세를 정의하는 파일" }
@@ -23,3 +25,8 @@ ui_guidelines = { path = "vibe-workflow/ui_guidelines.md", description = "UI/UX 
 coding_conventions = { path = "vibe-workflow/coding_conventions.md", description = "코딩 표준 및 컨벤션을 정의하고 관리하는 파일" }
 configuration_guide = { path = "vibe-workflow/configuration_guide.md", description = "프로젝트 설정 방법 및 환경 변수 상세 안내를 제공하는 파일" }
 test_case_template = { path = "vibe-workflow/test_case_template.md", description = "테스트 케이스 작성 표준 및 템플릿을 제공하는 파일" }
+
+[language_framework_guidelines_files]
+sveltekit_guidelines = { path = "vibe-workflow/language_framework_guidelines/sveltekit_guidelines.md", description = "SvelteKit 사용 시 주의사항 및 가이드라인" }
+hono_guidelines = { path = "vibe-workflow/language_framework_guidelines/hono_guidelines.md", description = "Hono 사용 시 주의사항 및 가이드라인" }
+tauri_guidelines = { path = "vibe-workflow/language_framework_guidelines/tauri_guidelines.md", description = "Tauri 사용 시 주의사항 및 가이드라인" }

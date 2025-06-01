@@ -39,6 +39,7 @@
 # 목표: 'vibe-workflow/project_structure.toml' 파일을 통해 프로젝트의 현재 파일 구조를 정확하게 반영하고, AI가 이를 바탕으로 작업을 수행하도록 한다.
 - AI는 'vibe-workflow/project_structure.toml'을 참고하여 프로젝트의 디렉토리 구조와 각 부분의 역할을 파악한다.
 - 코드 구조 변경(파일 추가/삭제/이동)이 발생하면, AI는 자율적으로 'vibe-workflow/project_structure.toml' 파일에 해당 변경사항을 즉시 기록 및 업데이트한다.
+- `project_structure.toml` 파일에는 LLM이 프로젝트의 전체적인 구조와 주요 파일의 역할을 이해하는 데 필요한 핵심 정보만 포함해야 한다. `node_modules`, `dist`, `build`와 같이 빌드 또는 의존성 관리 시스템에 의해 생성되는 대량의 파일이나 폴더, 또는 LLM의 작업에 직접적인 영향을 주지 않는 임시 파일 등은 포함하지 않는다. 이는 컨텍스트 낭비를 방지하고, `project_structure.toml`의 가독성과 효율성을 유지하기 위함이다.
 
 # --- 프로젝트 설정 및 환경 ---
 # (주의: 이 섹션의 규칙에 따른 의존성 변경 작업은 상위의 "최상위 원칙"에 명시된 사용자 승인 절차를 따릅니다.)
