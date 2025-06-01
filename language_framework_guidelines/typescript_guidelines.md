@@ -8,9 +8,10 @@
 
 ### `any` 타입 사용 지양
 
-*   `any`는 타입 검사를 무력화하여 예상치 못한 런타임 오류를 유발할 수 있습니다.
-*   공유 함수나 타입 정의에 `any`가 포함되면, 해당 코드를 사용하는 다른 부분의 타입 안전성까지 잃게 됩니다.
-*   **예시**:
+* `any`는 타입 검사를 무력화하여 예상치 못한 런타임 오류를 유발할 수 있습니다.
+* 공유 함수나 타입 정의에 `any`가 포함되면, 해당 코드를 사용하는 다른 부분의 타입 안전성까지 잃게 됩니다.
+* **예시**:
+
     ```typescript
     function add(a: any, b: any): any {
       return a + b;
@@ -22,8 +23,9 @@
 
 예측 불가능한 데이터(예: 외부 API 응답, 사용자 생성 콘텐츠, `JSON.parse()` 결과)를 다룰 때는 `any` 대신 `unknown`을 사용해야 합니다. `unknown`은 값에 대한 어떠한 작업도 수행하기 전에 개발자가 명시적인 타입 검사(타입 가드)를 수행하도록 강제하여 타입 안전성을 유지합니다.
 
-*   **타입 가드 사용**: `typeof`, `instanceof`, 사용자 정의 타입 가드 또는 Zod와 같은 스키마 유효성 검사 라이브러리를 사용하여 `unknown` 값을 안전하게 처리합니다.
-*   **예시**:
+* **타입 가드 사용**: `typeof`, `instanceof`, 사용자 정의 타입 가드 또는 Zod와 같은 스키마 유효성 검사 라이브러리를 사용하여 `unknown` 값을 안전하게 처리합니다.
+* **예시**:
+
     ```typescript
     async function fetchData(): Promise<unknown> {
       // ... 외부 API 호출 또는 예측 불가능한 데이터 반환
@@ -47,15 +49,15 @@
 
 ### `strict` 모드 활성화 강력 권장
 
-*   `tsconfig.json`에서 전체 `strict` 모드를 활성화하는 것을 강력히 권장합니다. `strict` 모드는 `noImplicitAny`, `strictNullChecks`, `strictFunctionTypes`, `strictPropertyInitialization`, `noImplicitReturns`, `useUnknownInCatchVariables` 등 여러 엄격한 타입 검사 플래그를 포함하여 강력한 함수 계약을 시행하는 데 매우 시너지 효과가 있습니다.
-*   **`strict` 모드 플래그의 시너지**:
-    *   `noImplicitAny`: 함수 매개변수와 변수가 정의된 타입을 갖도록 보장하여 `any`가 스며드는 것을 방지합니다.
-    *   `strictNullChecks`: `null` 및 `undefined`에 대한 명시적인 처리를 강제하여 타입 안전성을 크게 향상시킵니다.
-    *   `strictFunctionTypes`: 함수 매개변수 검사를 엄격하게 수행하여 런타임 오류를 방지합니다.
-    *   `strictPropertyInitialization`: 클래스 속성이 생성자에서 초기화되거나 초기화자를 가져야 함을 강제합니다.
-    *   `noImplicitReturns`: 함수가 `void` 또는 `any` 이외의 반환 타입을 선언하는 경우, 모든 코드 경로가 `return` 문으로 끝나도록 강제합니다.
-    *   `useUnknownInCatchVariables`: `catch` 블록에서 포착된 오류를 `unknown`으로 타이핑하도록 강제하여 더 안전한 오류 처리를 유도합니다.
-*   이 중 하나라도 비활성화되면 안전망이 약화되어 런타임 오류로 이어질 수 있습니다. 개별 플래그를 관리해야 하는 경우, 각 플래그의 상호 작용을 잘 이해해야 합니다.
+* `tsconfig.json`에서 전체 `strict` 모드를 활성화하는 것을 강력히 권장합니다. `strict` 모드는 `noImplicitAny`, `strictNullChecks`, `strictFunctionTypes`, `strictPropertyInitialization`, `noImplicitReturns`, `useUnknownInCatchVariables` 등 여러 엄격한 타입 검사 플래그를 포함하여 강력한 함수 계약을 시행하는 데 매우 시너지 효과가 있습니다.
+* **`strict` 모드 플래그의 시너지**:
+  * `noImplicitAny`: 함수 매개변수와 변수가 정의된 타입을 갖도록 보장하여 `any`가 스며드는 것을 방지합니다.
+  * `strictNullChecks`: `null` 및 `undefined`에 대한 명시적인 처리를 강제하여 타입 안전성을 크게 향상시킵니다.
+  * `strictFunctionTypes`: 함수 매개변수 검사를 엄격하게 수행하여 런타임 오류를 방지합니다.
+  * `strictPropertyInitialization`: 클래스 속성이 생성자에서 초기화되거나 초기화자를 가져야 함을 강제합니다.
+  * `noImplicitReturns`: 함수가 `void` 또는 `any` 이외의 반환 타입을 선언하는 경우, 모든 코드 경로가 `return` 문으로 끝나도록 강제합니다.
+  * `useUnknownInCatchVariables`: `catch` 블록에서 포착된 오류를 `unknown`으로 타이핑하도록 강제하여 더 안전한 오류 처리를 유도합니다.
+* 이 중 하나라도 비활성화되면 안전망이 약화되어 런타임 오류로 이어질 수 있습니다. 개별 플래그를 관리해야 하는 경우, 각 플래그의 상호 작용을 잘 이해해야 합니다.
 
 ### 개별 엄격성 플래그 문제점 및 해결 지침
 

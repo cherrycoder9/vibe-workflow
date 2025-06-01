@@ -3,9 +3,14 @@
 # 일관된 패턴으로 파일을 관리하며, 새로운 파일을 생성하거나 기존 파일의 위치를 결정할 때 활용합니다.
 
 [project]
-name = ""
-description = ""
+name = "미정"
+description = "추후 논의를 통해 결정될 프로젝트 이름과 설명"
+version = "1.0.0"
+authors = "cherrycoder9 <cherrycoder9@gmail.com>"
+license = "MIT"
 root_directory = "."
+repository_url = ""
+homepage_url = ""
 
 [directories]
 vibe_workflow = { path = "vibe-workflow/", description = "LLM 규약 및 문서 파일들을 포함하는 디렉토리" }

@@ -86,6 +86,7 @@ VSCode 환경에서 `markdownlint` 익스텐션을 올바르게 이해하고 설
 **설정 우선순위 및 일반적인 설정 오류**:
 설정은 명확한 우선순위를 따른다. 일반적으로 프로젝트 내에 위치한 설정 파일이 VSCode의 전역적 또는 작업 공간별 설정보다 우선 적용된다. 가장 높은 우선순위를 갖는 것은 `.markdownlint-cli2.{jsonc,yaml,cjs}` 파일이며, 그 다음이 `.markdownlint.{jsonc,json,yaml,yml,cjs}` 파일이다. VSCode 설정 내에서는 `markdownlint.configFile`로 지정된 파일이 `markdownlint.config` 객체보다 우선한다.
 흔히 발생하는 설정 오류로는 다음과 같은 것들이 있다:
+
 - **잘못된 파일명 또는 위치**: `.markdownlint.json` 파일명이 정확하지 않거나 프로젝트 루트 디렉터리가 아닌 곳에 위치시킨 경우 설정이 로드되지 않는다.
 - **JSON/YAML 구문 오류**: 설정 파일 내부에 쉼표 누락, 잘못된 중첩 등 구문 오류가 있으면 파싱에 실패하여 적용되지 않는다. VSCode에서 `.jsonc` (JSON with Comments) 형식을 사용하면 주석을 추가할 수 있어 설정 이해에 도움이 된다.
 - **우선순위 오해**: VSCode `settings.json`에 규칙을 설정했음에도 불구하고 프로젝트 내의 `.markdownlint.json` 파일 때문에 해당 설정이 적용되지 않는 경우가 대표적이다.
@@ -105,6 +106,7 @@ VSCode 환경에서 `markdownlint` 익스텐션을 올바르게 이해하고 설
   }
 }
 ```
+
 위 설정은 MD033 규칙을 적용하되, `details`, `summary`, `br`, `img`, `sup`, `sub` 태그는 예외적으로 허용한다.
 
 **인라인 비활성화: 시기적절하고 현명한 사용법**:
@@ -134,6 +136,7 @@ Markdown은 다양한 "맛(flavor)"이 존재하며, 특히 CommonMark와 GFM(Gi
 GFM은 CommonMark의 슈퍼셋(superset)으로, 테이블, 작업 목록(task lists), 확장된 자동 링크(autolinks), 취소선(strikethrough) 등 유용한 기능을 다수 추가했다. 그러나 이러한 GFM 고유 기능들은 엄격한 CommonMark 파서에서는 지원되지 않거나 다르게 해석될 수 있다.
 
 **일관되게 렌더링되는 마크다운 작성 팁**:
+
 - **CommonMark 우선 사용**: 가장 폭넓은 호환성을 위해서는 CommonMark 표준을 따르는 것이 안전하다.
 - **GFM 기능 사용 시 인지**: GFM 특정 기능을 사용할 경우, 해당 문서가 GFM을 지원하는 환경(예: GitHub)을 대상으로 한다는 점을 명확히 하거나, 다른 환경에서는 다르게 보일 수 있음을 인지해야 한다.
 - **HTML 사용 최소화**: 플랫폼 간 렌더링 차이를 줄이는 가장 확실한 방법 중 하나는 마크다운 고유 문법을 최대한 활용하고, 불가피한 경우를 제외하고는 HTML 사용을 피하는 것이다.
