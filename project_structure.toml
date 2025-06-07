@@ -40,3 +40,4 @@ css_guidelines = { path = "vibe-workflow/language_framework_guidelines/css_guide
 tauri_guidelines = { path = "vibe-workflow/language_framework_guidelines/tauri_guidelines.md", description = "Tauri 사용 시 주의사항 및 가이드라인" }
 rust_guidelines = { path = "vibe-workflow/language_framework_guidelines/rust_guidelines.md", description = "Rust 사용 시 주의사항 및 가이드라인" }
 markdown_guidelines = { path = "vibe-workflow/language_framework_guidelines/markdown_guidelines.md", description = "Markdown 문서 작성 시 주의사항 및 가이드라인" }
+zod_guidelines = { path = "vibe-workflow/language_framework_guidelines/zod_guidelines.md", description = "Zod 사용 시 주의사항 및 가이드라인" }
